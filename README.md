@@ -1,69 +1,44 @@
-# React + TypeScript + Vite
+# Reformulake
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une plateforme moderne de reformulation de phrases utilisant l'IA, développée avec React TypeScript et l'API Together.ai.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🌍 Support multilingue (français/anglais)
+- 🤖 Reformulation IA avec Together.ai
+- 📊 Statistiques d'utilisation avec graphiques
+- 📋 Copie automatique des résultats
+- 🎨 Design moderne avec Framer Motion
+- 📱 Interface responsive
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clonez le repository
+2. Installez les dépendances : `npm install`
+3. Créez un fichier `.env` et ajoutez votre clé API Together.ai :
+   ```
+   VITE_TOGETHER_API_KEY=your_together_api_key_here
+   ```
+4. Démarrez le serveur de développement : `npm run dev`
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Déploiement sur Vercel
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. Connectez votre repository GitHub à Vercel
+2. Ajoutez la variable d'environnement `VITE_TOGETHER_API_KEY`
+3. Déployez l'application
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Technologies utilisées
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React 19 avec TypeScript
+- Framer Motion pour les animations
+- Tailwind CSS pour le styling
+- React Router pour la navigation
+- Recharts pour les graphiques
+- React Icons pour les icônes
+- Together.ai API pour l'IA
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Obtenir une clé API Together.ai
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Rendez-vous sur [Together.ai](https://together.ai)
+2. Créez un compte et obtenez votre clé API
+3. Ajoutez la clé dans votre fichier `.env`
