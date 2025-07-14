@@ -55,7 +55,7 @@ const TextInput: React.FC<TextInputProps> = ({
                 ? "Entrez votre texte ici..."
                 : "Enter your text here..."
             }
-            className="w-full h-full p-4 border-2 border-gray-200 dark:border-gray-700 rounded-xl focus:border-blue-500 focus:outline-none resize-none text-gray-700 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 transition-colors duration-300"
+            className="w-full h-full max-h-64 p-4 border-2 border-gray-200 dark:border-gray-700 rounded-xl focus:border-blue-500 focus:outline-none resize-none text-gray-700 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 transition-colors duration-300"
             maxLength={maxChars}
           />
         </div>
