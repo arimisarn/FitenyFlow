@@ -1,4 +1,4 @@
-# Reformulake
+# FitenyFolio
 
 Une plateforme moderne de reformulation de phrases utilisant l'IA, développée avec React TypeScript et l'API Together.ai.
 
@@ -20,12 +20,6 @@ Une plateforme moderne de reformulation de phrases utilisant l'IA, développée 
    VITE_TOGETHER_API_KEY=your_together_api_key_here
    ```
 4. Démarrez le serveur de développement : `npm run dev`
-
-## Déploiement sur Vercel
-
-1. Connectez votre repository GitHub à Vercel
-2. Ajoutez la variable d'environnement `VITE_TOGETHER_API_KEY`
-3. Déployez l'application
 
 ## Technologies utilisées
 
