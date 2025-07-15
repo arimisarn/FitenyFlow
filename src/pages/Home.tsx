@@ -59,13 +59,13 @@ const Home: React.FC = () => {
         >
           <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4 transition-colors duration-300">
             {selectedLanguage === "french"
-              ? "Reformulez vos textes avec l'IA"
-              : "Reformulate your texts with AI"}
+              ? "Reformulez vos textes avec FItenyFlow"
+              : "Reformulate your texts with FitenyFlow"}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 transition-colors duration-300">
             {selectedLanguage === "french"
-              ? "Transformez vos phrases en français ou en anglais avec notre IA avancée"
-              : "Transform your sentences in French or English with our advanced AI"}
+              ? "Transformez vos phrases en français ou en anglais"
+              : "Transform your sentences in French or English"}
           </p>
         </motion.div>
 
