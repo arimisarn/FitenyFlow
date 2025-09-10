@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Statistics from "./pages/Statistics";
+import Translate from "./pages/Translate";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/translate" element={<Translate />} />
             <Route path="/statistics" element={<Statistics />} />
           </Routes>
         </motion.main>

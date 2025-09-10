@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FiEdit3, FiBarChart, FiMenu, FiX } from "react-icons/fi";
 import DarkModeToggle from "./DarkModeToggle";
 import logo from "../assets/logo.png";
-
+import { MdTranslate } from "react-icons/md";
 const Header: React.FC = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -120,6 +120,21 @@ const Header: React.FC = () => {
             >
               <FiBarChart className="w-5 h-5" />
               <span>Statistiques</span>
+            </motion.button>
+          </Link>
+
+          <Link to="/translate" onClick={closeMenu}>
+            <motion.button
+              className={`w-full text-left flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                location.pathname === "/translate"
+                  ? "bg-purple-100 dark:bg-purple-800 text-purple-700 dark:text-purple-100 font-semibold"
+                  : "text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900"
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <MdTranslate className="w-5 h-5" />
+              <span>Traduire</span>
             </motion.button>
           </Link>
 
