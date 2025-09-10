@@ -41,7 +41,7 @@ const TextInputTrad: React.FC<TextInputProps> = ({
       <div className="flex items-center space-x-2 mb-4">
         <FiType className="w-5 h-5 text-gray-600 dark:text-gray-300 transition-colors duration-300" />
         <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100 transition-colors duration-300">
-          {language === "french" ? "Texte à reformuler" : "Text to reformulate"}
+          {language === "french" ? "Texte à traduire" : "Text to translate"}
         </h2>
       </div>
 
@@ -98,12 +98,12 @@ const TextInputTrad: React.FC<TextInputProps> = ({
               <FiRefreshCw className="w-5 h-5 animate-spin" />
               <span>
                 {language === "french"
-                  ? "Reformulation..."
-                  : "Reformulating..."}
+                  ? "Traduction..."
+                  : "Translating..."}
               </span>
             </div>
           ) : (
-            <span>{language === "french" ? "Reformuler" : "Reformulate"}</span>
+            <span>{language === "french" ? "Traduire" : "Translate"}</span>
           )}
         </motion.button>
       </form>
