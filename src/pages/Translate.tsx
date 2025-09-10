@@ -1,9 +1,9 @@
 // src/pages/Translate.tsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import TextInput from "../components/TextInput";
 import ReformulationResult from "../components/ReformulationResult";
 import { translateText } from "../services/translateApi";
+import TextInputTrad from "../components/TextInputTrad";
 
 const Translate: React.FC = () => {
   const [targetLanguage, setTargetLanguage] = useState<"french" | "english">(
@@ -67,31 +67,37 @@ const Translate: React.FC = () => {
         </motion.div>
 
         {/* Choix de langue simple (au lieu de LanguageSelector complet) */}
-        <div className="flex justify-center mb-6">
-          <button
+        {/* Choix de langue style Header */}
+        <div className="flex justify-center mb-6 space-x-4">
+          <motion.button
             onClick={() => setTargetLanguage("english")}
-            className={`px-4 py-2 rounded-l-lg border ${
+            className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
               targetLanguage === "english"
-                ? "bg-blue-600 text-white"
-                : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300"
+                ? "bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-100 font-semibold"
+                : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900"
             }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            English
-          </button>
-          <button
+            <span>🇬🇧 English</span>
+          </motion.button>
+
+          <motion.button
             onClick={() => setTargetLanguage("french")}
-            className={`px-4 py-2 rounded-r-lg border ${
+            className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
               targetLanguage === "french"
-                ? "bg-blue-600 text-white"
-                : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300"
+                ? "bg-purple-100 dark:bg-purple-800 text-purple-700 dark:text-purple-100 font-semibold"
+                : "text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900"
             }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Français
-          </button>
+            <span>🇫🇷 Français</span>
+          </motion.button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 min-h-[500px]">
-          <TextInput
+          <TextInputTrad
             value={inputText}
             onChange={setInputText}
             onReformulate={handleTranslate}
