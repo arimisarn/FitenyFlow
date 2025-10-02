@@ -1,4 +1,4 @@
-# FitenyFolio
+# FitenyFlow
 
 Une plateforme moderne de reformulation de phrases utilisant l'IA, développée avec React TypeScript et l'API Together.ai.
 
