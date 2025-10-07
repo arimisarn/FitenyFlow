@@ -55,7 +55,20 @@ const Header: React.FC = () => {
                 <span>Reformuler</span>
               </motion.button>
             </Link>
-
+            <Link to="/" onClick={closeMenu}>
+              <motion.button
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                  location.pathname === "/"
+                    ? "bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-100 font-semibold"
+                    : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900"
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FiEdit3 className="w-4 h-4" />
+                <span>Reformuler</span>
+              </motion.button>
+            </Link>
             <Link to="/statistics" onClick={closeMenu}>
               <motion.button
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -93,7 +106,7 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
         >
-          <Link to="/" onClick={closeMenu}>
+          <Link to="/translate" onClick={closeMenu}>
             <motion.button
               className={`w-full text-left flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                 location.pathname === "/"
@@ -103,8 +116,8 @@ const Header: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <FiEdit3 className="w-5 h-5" />
-              <span>Reformuler</span>
+              <MdTranslate className="w-5 h-5" />
+              <span>Traduire</span>
             </motion.button>
           </Link>
 
