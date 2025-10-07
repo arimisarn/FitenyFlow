@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                 <span>Reformuler</span>
               </motion.button>
             </Link>
-            <Link to="/" onClick={closeMenu}>
+            <Link to="/translate" onClick={closeMenu}>
               <motion.button
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                   location.pathname === "/"
@@ -65,8 +65,8 @@ const Header: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FiEdit3 className="w-4 h-4" />
-                <span>Reformuler</span>
+                <MdTranslate className="w-4 h-4" />
+                <span>Traduire</span>
               </motion.button>
             </Link>
             <Link to="/statistics" onClick={closeMenu}>
